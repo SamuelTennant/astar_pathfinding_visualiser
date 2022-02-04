@@ -1,4 +1,8 @@
-import { func } from "./modules/mod1";
+import PaintManager from "./paint_nodes";
+import NodeManager from "./node_manager";
 
-const button = document.getElementById("button");
-button.addEventListener("click", func);
+const paintManager = new PaintManager();
+const nodeManager = new NodeManager();
+
+const resetButton = document.getElementById("reset-button");
+resetButton.addEventListener("click", () => nodeManager.resetBoard());

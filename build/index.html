@@ -4,9 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Rollup</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>A* Pathfinding</title>
   </head>
   <body>
-    <h1 id="title">Hello, world!</h1>
+    <div id="board-container">
+      <div id="board">
+        <div class="node node-start"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-wall"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-end"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+        <div class="node node-blank"></div>
+      </div>
+    </div>
   </body>
 </html>

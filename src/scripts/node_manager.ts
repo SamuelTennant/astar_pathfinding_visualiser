@@ -1,9 +1,9 @@
-import Node, { NodeType } from "./node";
+import Node, { NodeType, Vec2 } from "./node";
 
 const NODE_COUNT = 100;
 
 export default class NodeManager {
-  private nodes: Node[] = [];
+  static nodes: Node[] = [];
   static startNode: Node;
   static endNode: Node;
 
@@ -13,15 +13,20 @@ export default class NodeManager {
 
   private generateBoard() {
     for (let i = 0; i < NODE_COUNT; i++) {
-      let node = new Node(NodeType.Blank);
+      // Generate coordinates
+      const x = i % 10;
+      const y = 10 - Math.floor(i / 10);
+      const coords = { x, y };
 
-      this.nodes.push(node);
+      let node = new Node(NodeType.Blank, coords);
+
+      NodeManager.nodes.push(node);
     }
   }
 
   resetBoard() {
     // Set all nodes to blank.
-    this.nodes.forEach((node: Node) => {
+    NodeManager.nodes.forEach((node: Node) => {
       node.updateNodeType(NodeType.Blank);
       NodeManager.startNode = null;
       NodeManager.endNode = null;
@@ -46,5 +51,19 @@ export default class NodeManager {
     // Update variable and new end node.
     this.endNode = node;
     node.updateNodeType(NodeType.Start);
+  }
+
+  static getNodeByCoordinates(coordinates: Vec2): Node {
+    let foundNode: Node;
+    NodeManager.nodes.forEach((node) => {
+      if (
+        coordinates.x == node.coordinates.x &&
+        coordinates.y == node.coordinates.y
+      ) {
+        foundNode = node;
+      }
+    });
+
+    return foundNode;
   }
 }

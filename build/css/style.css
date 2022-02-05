@@ -5,7 +5,6 @@
   --blue: #61afef;
   --red: #e06c75;
   --green: #98c379;
-  --purple: #c678dd;
 }
 
 body {
@@ -73,6 +72,10 @@ body {
 
 .node-wall {
   background: var(--dark);
+}
+
+.node-path {
+  background: var(--blue);
 }
 
 /* Button */
